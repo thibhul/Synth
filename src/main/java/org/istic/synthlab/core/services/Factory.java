@@ -18,6 +18,8 @@ import org.istic.synthlab.core.modules.lineOuts.LineOut;
 import org.istic.synthlab.core.modules.lineOuts.LineType;
 import org.istic.synthlab.core.modules.modulators.*;
 import org.istic.synthlab.core.modules.oscillators.*;
+import org.istic.synthlab.core.modules.oscilloscope.IOscilloscope;
+import org.istic.synthlab.core.modules.oscilloscope.Oscilloscope;
 
 
 /**
@@ -154,5 +156,9 @@ public class Factory {
             default:
                 return new AmplitudeModulator(name, component);
         }
+    }
+
+    public static IOscilloscope createOscilloscope(IComponent component) {
+        return new Oscilloscope(component);
     }
 }
